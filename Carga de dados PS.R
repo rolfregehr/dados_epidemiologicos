@@ -2,12 +2,14 @@ library(tidyverse)
 
 library(read.dbc)
 
+atend_ps$mes_atend = NULL
+atend_ps$cid_3c = NULL
 
-arq = list.files("D:/Dados epidemiológicos/PS/")
+arq = list.files("D:/OneDrive - Senado Federal/Epidemiologia/dados_epidemiologicos/fonte - DATASUS")
 
-setwd("D:/Dados epidemiológicos/PS/")
+setwd("D:/OneDrive - Senado Federal/Epidemiologia/dados_epidemiologicos/fonte - DATASUS")
 
-cont = 0
+cont = 1
 
 for (i in arq) {
   
@@ -28,6 +30,3 @@ for (i in arq) {
   print(length(atend_ps$CNS_PAC))
 }
 
-teste <- read.dbc("PSRO1903.DBC")
-
-left_join()
